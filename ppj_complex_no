@@ -1,0 +1,66 @@
+package ppj_lab_javalab;
+import java.util.Scanner; 
+public class Complex {
+private double x;
+private double y;
+
+public Complex() { 
+	this(0, 0);
+}
+
+public Complex(double real, double imaginary) {
+	x = real;
+y = imaginary;
+}
+
+
+public void input() {
+Scanner scanner = new Scanner(System.in);
+
+System.out.print("Enter the real part (x): ");
+x = scanner.nextDouble();
+System.out.print("Enter the imaginary part (y): "); 
+y = scanner.nextDouble();
+}
+
+
+public void display() {
+System.out.println("Complex Number: " + x + " + " + y + "i");
+}
+
+public Complex add(Complex other) { 
+	double sumX = x + other.x; double sumY = y + other.y; 
+	return new Complex(sumX, sumY);
+}
+
+
+public Complex multiply(Complex other) {
+double productX = (x * other.x) - (y * other.y); 
+double productY = (x * other.y) + (y * other.x); 
+return new Complex(productX, productY);
+}
+
+public static void main(String[] args) { 
+	
+	System.out.println("Name:Swadhin Kumar Sahoo");
+	System.out.println("Roll no:2230216");
+
+Complex complex1 = new Complex(); Complex complex2 = new Complex();
+
+Scanner sc = new Scanner(System.in);
+
+System.out.println("Enter the first complex number:"); complex1.input();
+
+System.out.println("Enter the second complex number:"); complex2.input();
+
+sc.close();
+
+System.out.println("Complex Number 1:"); complex1.display();
+
+System.out.println("\nComplex Number 2:"); complex2.display();
+
+Complex sum = complex1.add(complex2); System.out.println("\nSum of Complex Numbers:"); sum.display();
+
+Complex product = complex1.multiply(complex2); System.out.println("\nProduct of Complex Numbers:"); product.display();
+}
+}
