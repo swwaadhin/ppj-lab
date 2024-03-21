@@ -1,0 +1,77 @@
+package ppj_lab_javalab;
+import java.util.Scanner;
+public class assignment_1 {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
+		
+		System.out.println("NAME:Swadhin kumar sahoo");
+		System.out.println("Roll no:2230216");
+		
+		 String name="swadhin";
+	        long roll_no=220216;
+	        String branch="ecsc";
+	        String department="eletronics";
+	        String unversity="kiit";
+	        System.out.println("my name is:" + name);
+	        System.out.println("my roll no is:" + roll_no);
+	        System.out.println("my branch is:" + branch);
+	        System.out.println("my department is:" + department);
+	        System.out.println("my unversity is:" + unversity);
+	        
+	        //java program to find the area and circumference of a circle
+	        System.out.print("enter the raidus of the circle:");
+	        double r=sc.nextDouble();
+	        
+	        //circumference 
+	        System.out.println("the circumference of the circle is:"+2*Math.PI*r);
+	        //area 
+	        System.out.println("the area of the circle is:"+Math.PI*r*r);
+	        
+	        
+	        //create a program to calculate the area and perimeter of the rectangle
+	        System.out.printf("enter the length of the rectangle:");
+	        double l=sc.nextDouble();
+	        System.out.printf("enter the breath of the rectangle:");
+	        double b=sc.nextDouble();
+	        
+	        System.out.println("the area of the rectangle is:"+l*b);
+	        System.out.println("the perimeter of rectangle is:"+2*(l+b));
+	        
+	        //to calculate hours minutes and second if only second is given
+	        
+
+	        System.out.print("Enter the number of seconds: ");
+	        int seconds = sc.nextInt();
+
+	        int hours = seconds / 3600;
+	        seconds %= 3600; // Update seconds to remaining seconds after calculating hours
+	        int minutes = seconds / 60;
+	        seconds %= 60; // Update seconds to remaining seconds after calculating minutes
+
+	        System.out.println(seconds + " seconds is equivalent to:");
+	        System.out.println(hours + " hour(s)");
+	        System.out.println(minutes + " minute(s)");
+	        System.out.println(seconds + " second(s)");
+	        
+	        //take user input to take first name and last name from the user and join them
+	        
+	        System.out.println("Enter the first name:");
+	        String first=sc.next();
+	        
+	        System.out.println("enter the last name:");
+	        String last=sc.next();
+	      
+	        
+	        System.out.println(first +" "+ last);
+	        
+	        
+	        
+	        
+	        
+	}
+
+}
