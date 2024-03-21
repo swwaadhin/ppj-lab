@@ -1,0 +1,139 @@
+package ppj_lab_javalab;
+import java.util.Scanner;
+public class Assignment_2_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		//to form a table of y
+		System.out.println("NAME:swadhin kumar sahoo");
+		System.out.println("roll no:2230216");
+
+		double x=0;
+		double y;
+		
+		
+		
+		int i=0;
+		for(i=0;i<=10;i++) {
+			x=x+0.1;
+		    y=1/Math.pow(2.7, x);
+		    System.out.println();
+		    //the values of y are
+		    System.out.printf("%.2f" ,y);
+		}
+		System.out.println();
+		
+		
+		//find the largest no among three given no
+		
+		System.out.println("enter the first no:");
+		int a=sc.nextInt();
+		
+		System.out.println("enter the second no:");
+		int b=sc.nextInt();
+		
+		System.out.println("enter the three no:");
+		int c=sc.nextInt();
+		
+		if(a>b && a>c) {
+			System.out.println("the greatest no is:" +a);
+		}
+		
+		if(b>c && b>a) {
+			System.out.println("the greatest no is:" +b);
+		}
+		
+		if(c>b && c>a) {
+			System.out.println("the greatest no is:" +c);
+		}
+		
+		//question no 3
+		//to find weather the given point in on the circle,inside the circle,outside the circle 
+		int x1;
+		int y1;
+		System.out.println("enter the value of x coodinate");
+		//X2 DENOTE THE X COODINATE
+		int x2=sc.nextInt();
+		System.out.println("enter the y coodinate");
+		//y2 denote the y coordinate
+		int y2=sc.nextInt();
+		
+		
+		x1=(int) Math.pow(x2, 2);
+		y1=(int) Math.pow(y2,2);
+		
+		if((x1+y1)==25) {
+			System.out.println("the x coordinate "+  x2 +"and y coodeinate" + y2  +"lies on the circle");
+		}
+		else if((x1+y1)<25) {
+			System.out.println("the x coordinate "+ x2  +"and y coodeinate" + y2 +"lies inside the circle");
+		}
+		
+		else  {
+			System.out.println("the x coordinate "+ x2 +"and y coodeinate" + y2 +"lies outside the circle");
+		}
+		
+		
+		
+		//question 4
+		//to find weather the no is armstrong no or not
+		
+		System.out.println("enter the no");
+		int n=sc.nextInt();
+		System.out.println(armstrong(n));
+		
+		
+		//fibonnaci series
+		
+		System.out.println(fibo(10));
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+	//armstrong
+	public static boolean armstrong(int n) {
+		int sum=0;
+		int k=n;
+		int rem;
+		while(k!=0) {
+			rem=k%10;
+			sum=sum+rem*rem*rem;
+			k=k/10;
+		}
+		if(sum==n) {
+			//it will return true if it id a armstrong no
+			return true;
+		}
+		else {
+			//return false if it is not a armstrong no
+			return false;
+		}
+				
+	}
+
+	
+	//to print the series of fibo no
+	static int fibo(int k) {
+		
+		//base condition
+		if(k<2) {
+			return k;
+		}
+
+		return fibo(k-1)+fibo(k-2);	
+	}
+
+
+}
